@@ -44,7 +44,7 @@
           <suiteXmlFiles>
             <!-- <suiteXmlFile>testng_Debug.xml</suiteXmlFile>
             <suiteXmlFile>testng_Regression.xml</suiteXmlFile> -->
-               <suiteXmlFile>${Application}</suiteXmlFile>
+               <suiteXmlFile>${Application}.xml</suiteXmlFile>
         
             
           </suiteXmlFiles>
