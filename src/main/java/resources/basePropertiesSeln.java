@@ -129,14 +129,18 @@ public class basePropertiesSeln {
 		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 		log.debug("implicit Wait Applied");
 	//	log.debug("Clean Cookies");
-		driver.get(prop.getProperty("url3"));
+	//	driver.get(prop.getProperty("url3"));
 		
 	//	driver.get(prop.getProperty("url4"));
 
 		//Comment for eclipse runner
-		String URL=System.getProperty("url");
+	//	String URL=System.getProperty("url");
 
-		if (URL.contains("VoiceWatch-26.0")) {	
+		String URL=System.getProperty("url");
+		
+		
+		
+		/*if (URL.contains("VoiceWatch-26.0")) {	
 			driver.get(prop.getProperty("url1"));
 			log.debug("Current version is 26.0");
 
@@ -158,7 +162,7 @@ public class basePropertiesSeln {
 			}	
 
 
-
+*/
 		log.debug("URL provided");
 		driver.manage().window().maximize();
 		log.info("Screen maximized successfully");

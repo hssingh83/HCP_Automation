@@ -7,7 +7,7 @@
 <listener class-name="resources.listeners"/>
 </listeners>
 
-  
+ <!--  
     
     <test  name="Test Case: 001 - login_Page_Verification">
     <classes>
@@ -16,15 +16,15 @@
       
      </classes> 
      </test>
+      -->
      
      
-     
-<!--     <test  name="Test Case: 001 - login_Page_Verification">
+    <test  name="Test Case: 001 - login_Page_Verification">
     <classes>
      
       <class name="VW_TC.TC0017_login_With_Exmpirix_Admin_Sanity"/>
       
      </classes> 
-     </test> -->
+     </test>
      
 </suite> <!-- Suite -->
