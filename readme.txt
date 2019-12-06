@@ -7,6 +7,8 @@ mvn -PRegression test -Dbrowser=chrome -Durl=VoiceWatch-26.2
 
 mvn -PRegression -Dsurefire.suiteXmlFiles=testng_Debug.xml test -Dbrowser=chrome -Durl=VoiceWatch-26.2
 
+mvn -PRegression test -Dsurefire.suiteXmlFiles=testng_Debug.xml -Dbrowser=chrome -Durl=https://os-2k16-vm332.empirix.com
+
 
 
 

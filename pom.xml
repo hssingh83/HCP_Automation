@@ -42,7 +42,11 @@
         
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>${Application}.xml</suiteXmlFile>
+            <!-- <suiteXmlFile>testng_Debug.xml</suiteXmlFile>
+            <suiteXmlFile>testng_Regression.xml</suiteXmlFile> -->
+               <suiteXmlFile>${Application}</suiteXmlFile>
+        
+            
           </suiteXmlFiles>
           <argLine>
                    -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
