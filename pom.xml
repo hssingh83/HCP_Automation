@@ -42,20 +42,14 @@
         
         <configuration>
           <suiteXmlFiles>
-            <!-- <suiteXmlFile>testng_Debug.xml</suiteXmlFile>
-            <suiteXmlFile>testng_Regression.xml</suiteXmlFile> -->
-               <suiteXmlFile>${Application}</suiteXmlFile>
-        
-            
+                 <suiteXmlFile>${Application}</suiteXmlFile>               
           </suiteXmlFiles>
           <argLine>
                    -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
            </argLine> 
           
         </configuration>
-      </plugin>    
-      
-    
+      </plugin>   
       
  </plugins>
 </build> 
@@ -73,12 +67,15 @@
   <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.22.0</version>
-        <configuration>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.0.0-M4</version>    
+       <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>testng_Sanity.xml</suiteXmlFile>
+                 <suiteXmlFile>${Application}</suiteXmlFile>               
           </suiteXmlFiles>
+          <argLine>
+                   -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+           </argLine> 
         </configuration>
       </plugin>    
  </plugins>
@@ -96,9 +93,9 @@
     </resources>
   <plugins>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.22.0</version>
+         <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.0.0-M4</version>    
         <configuration>
           <suiteXmlFiles>
             <suiteXmlFile>${Application}.xml</suiteXmlFile>
@@ -111,6 +108,55 @@
  </plugins>
 </build> 
 </profile>
+
+
+
+  <profile>
+  <id>Sanity_All</id>
+  <build>
+  <resources>
+         <resource>
+            <directory>src/main/java/resources</directory>
+            <filtering>true</filtering> 
+        </resource>
+    </resources>
+  <plugins>
+  	<plugin>
+  	
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>  
+      <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.0.0-M4</version>    
+        
+        <configuration>
+          <suiteXmlFiles>
+                 <suiteXmlFile>testng_Debug.xml</suiteXmlFile> 
+                 <suiteXmlFile>testng_Debug.xml</suiteXmlFile> 
+                 <suiteXmlFile>testng_Debug.xml</suiteXmlFile>               
+          </suiteXmlFiles>
+          <argLine>
+                   -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+           </argLine> 
+          
+        </configuration>
+      </plugin>   
+      
+ </plugins>
+</build> 
+</profile>
+
+
+
+
+
+
  </profiles>
 
  
